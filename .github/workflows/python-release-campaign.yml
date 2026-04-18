@@ -45,7 +45,7 @@ jobs:
         env:
           CIBW_BUILD: cp312-manylinux_x86_64 cp313-manylinux_x86_64
           CIBW_BEFORE_ALL: yum install -y libcurl-devel openssl-devel
-          CIBW_CONFIG_SETTINGS: "-C cmake.define.ADIOS2_USE_Campaign=ON"
+          CIBW_CONFIG_SETTINGS: 'cmake.define.ADIOS2_USE_Campaign=ON'
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v4
         with:
@@ -69,7 +69,7 @@ jobs:
         env:
           CIBW_BUILD: cp312-manylinux_aarch64 cp313-manylinux_aarch64
           CIBW_BEFORE_ALL: yum install -y libcurl-devel openssl-devel
-          CIBW_CONFIG_SETTINGS: "-C cmake.define.ADIOS2_USE_Campaign=ON"
+          CIBW_CONFIG_SETTINGS: 'cmake.define.ADIOS2_USE_Campaign=ON'
           CIBW_ARCHS_LINUX: aarch64
 
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v4
