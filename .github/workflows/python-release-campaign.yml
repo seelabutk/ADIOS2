@@ -43,7 +43,7 @@ jobs:
 
       - uses: pypa/cibuildwheel@8d2b08b68458a16aeb24b64e68a09ab1c8e82084 # v3.4.1
         env:
-          CIBW_BUILD: cp312-manylinux_x86_64 cp313-manylinux_x86_64
+          CIBW_BUILD: cp314-manylinux_x86_64
           CIBW_BEFORE_ALL: yum install -y libcurl-devel openssl-devel
           CIBW_CONFIG_SETTINGS: 'cmake.define.ADIOS2_USE_Campaign=ON'
 
@@ -72,7 +72,7 @@ jobs:
 
       - uses: pypa/cibuildwheel@8d2b08b68458a16aeb24b64e68a09ab1c8e82084 # v3.4.1
         env:
-          CIBW_BUILD: cp312-manylinux_aarch64 cp313-manylinux_aarch64
+          CIBW_BUILD: cp314-manylinux_aarch64
           CIBW_BEFORE_ALL: |
             yum install -y libcurl-devel openssl-devel
             DILL_UTIL=/project/thirdparty/dill/dill/dill_util.c
